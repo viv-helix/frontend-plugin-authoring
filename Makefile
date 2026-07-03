@@ -8,7 +8,7 @@ transifex_temp = ./temp/babel-plugin-formatjs
 
 build:
 	rm -rf ./dist
-	./node_modules/.bin/fedx-scripts babel src --out-dir dist --source-maps --extensions '.js,.jsx,.ts,.tsx' --ignore '**/*.test.jsx,**/*.test.js,**/*.test.tsx,**/*.test.ts,**/setupTest.js' --copy-files
+	./node_modules/.bin/fedx-scripts babel src --out-dir dist --source-maps --config-file ./node_modules/@openedx/frontend-build/config/babel-typescript.config.js --extensions '.js,.jsx,.ts,.tsx' --ignore '**/*.test.jsx,**/*.test.js,**/*.test.tsx,**/*.test.ts,**/setupTest.js' --copy-files
 	@# --copy-files brings in everything else (scss, etc.). Remove test/snapshot artifacts.
 	@find dist -name '*.test.js*' -delete
 	@rm -rf dist/**/__snapshots__
