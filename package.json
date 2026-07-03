@@ -1,0 +1,49 @@
+{
+  "name": "@edx/frontend-plugin-authoring",
+  "version": "0.1.0",
+  "description": "Frontend plugins for @edx/frontend-app-authoring (course outline unit card, and more).",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viv-helix/frontend-plugin-authoring.git"
+  },
+  "browserslist": [
+    "extends @edx/browserslist-config"
+  ],
+  "scripts": {
+    "build": "make build",
+    "i18n_extract": "fedx-scripts formatjs extract",
+    "lint": "fedx-scripts eslint --ext .js --ext .jsx --ext .ts --ext .tsx .",
+    "lint:fix": "fedx-scripts eslint --fix --ext .js --ext .jsx --ext .ts --ext .tsx .",
+    "snapshot": "fedx-scripts jest --updateSnapshot",
+    "test": "fedx-scripts jest --coverage --passWithNoTests"
+  },
+  "author": "edX",
+  "license": "AGPL-3.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@edx/frontend-app-authoring": "*",
+    "@edx/frontend-platform": "^8.3.1",
+    "@openedx/paragon": "^23.0.0",
+    "@tanstack/react-query": "^5.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^6.30.2"
+  },
+  "peerDependenciesMeta": {
+    "@edx/frontend-app-authoring": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@edx/browserslist-config": "^1.1.1",
+    "@openedx/frontend-build": "14.6.6",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "jest": "30.4.2"
+  }
+}

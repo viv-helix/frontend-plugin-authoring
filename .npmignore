@@ -1,0 +1,12 @@
+.eslintignore
+.eslintrc.js
+.gitignore
+.nvmrc
+Makefile
+module.config.js
+module.config.js.example
+npm-debug.log
+
+coverage
+node_modules
+temp
