@@ -8,3 +8,10 @@ export { default as ReleaseNotes } from './release-notes/ReleaseNotes';
 export { default as ReleaseNoteUnsubscribe } from './release-notes/unsubscribe/ReleaseNoteUnsubscribe';
 export { reducer as releaseNotesReducer } from './release-notes/data/slice';
 export { default as releaseNotesMessages } from './release-notes/messages';
+
+// Games editor: a native editor for the `games` XBlock block type. Not a plugin
+// slot — the host registers it generically via env.config.jsx `editorPlugins` /
+// `editorPluginReducers` (see src/editors/Editor.tsx and data/redux/index.ts).
+// No games-specific code lives in the host repo.
+export { default as GamesEditor } from './games-editor/GameEditor';
+export { reducer as gamesEditorReducer } from './games-editor/data/reducers';
